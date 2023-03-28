@@ -1,0 +1,116 @@
+<main>
+    <section>
+        <div>
+            <h1>{{make}} {{model}}</h1>
+            <p>{{year}} {{color}}</p>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <div>
+            {{#with features}}
+            {{#with interior}}
+            <h3>Features:</h3>
+            {{#with seats}}
+            <p>Material: {{material}}</p>
+            <p>Color: {{color}}</p>
+            <p>{{#if heated}} Heated {{/if}}</p>
+            <p>{{#if ventilated}} Ventilated {{/if}}</p>
+            {{/with}}
+        </div>
+        <hr>
+        <div>
+            <h5>Dashboard:</h5>
+            {{#with dashboard}}
+            {{ material}}, {{color}},
+            {{#with display}}
+            {{type}}, {{size}}, {{resolution}},
+            {{#if touchscreen}}touchscreen {{/if}}
+            {{/with}}
+            {{/with}}
+        </div>
+        <br>
+        <div>
+            <h5>Audio:</h5>
+            {{#with audio}}
+            {{ system}}, {{speakers}},
+            {{#if subwoofer}}subwoofer, {{/if}}
+            {{#if bluetoot}}bluetoot {{/if}}
+            {{#if USB}}USB {{/if}}
+            {{/with}}
+            {{/with}}
+        </div>
+        <hr>
+        <div>
+            {{#with exterior}}
+            <h5>Wheels</h5>
+            {{#with wheels}}
+            {{size}}, {{type}}, {{color}}
+            {{/with}}
+        </div>
+        <hr>
+        <div>
+            <h5>Headlights</h5>
+            {{#with headlights}}
+            {{type}}, {{brightness}},
+            {{#if automatic}}automatic{{/if}}
+            {{/with}}
+        </div>
+        <hr>
+        <div>
+            <h5>Sunroof</h5>
+            {{#with sunroof}}
+            {{type}}, {{size}},
+            {{#if automatic}}automatic{{/if}}
+            {{/with}}
+            {{/with}}
+        </div>
+        <hr>
+        <div>
+            <h5>Safety</h5>
+            {{#with safety.assistance}}
+            {{#if blind_spot_monitoring}}blind spot monitoring, {{/if}}
+            {{#if rear_cross_traffic_alert}}rear cross traffic alert, {{/if}}
+            {{#if lane_departure_warning}}lane departure warning, {{/if}}
+            {{#if adaptive_cruise_control}}adaptive cruise control, {{/if}}
+            {{#if collision_warning}}collision warning, {{/if}}
+            {{/with}}
+            {{/with}}
+        </div>
+    </section>
+    <hr>
+    <section>
+        <div>
+            <h3>Engine</h3>
+            {{#with engine}}
+            {{type}}, displacement:{{displacement}},
+            horsepower:{{horsepower}}, torque:{{torque}},
+            transmission:{{transmission.type}}, gears:{{gears}}
+            {{/with}}
+        </div>
+        <hr>
+        <div>
+            {{#with fuel_economy}}
+            <h3>Fuel economy:</h3>
+            <p>city: {{city}}</p>
+            <p>highway: {{highway}}</p>
+            <p>combined: {{combined}}</p>
+            {{/with}}
+        </div>
+        <hr>
+        <div>
+            {{#with price}}
+            <h3>Fuel economy:</h3>
+            <p>base: {{base}}</p>
+            <p>destination: {{destination}}</p>
+            {{#with options}}
+            <p>options: </p>
+            <p>navigation: {{navigation}}</p>
+            <p>moonroof: {{moonroof}}</p>
+            <p>premium paint: {{premium_paint}}</p>
+            {{/with}}
+            <h5>Total: {{total}}</h5>
+            {{/with}}
+        </div>
+    </section>
+</main>
