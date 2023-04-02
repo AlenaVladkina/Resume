@@ -1,0 +1,32 @@
+<main>
+    <div class="row">
+        {{#with navigation}}
+        <div class="col-4">
+            <h1>Shop</h1>
+        </div>
+
+        <div class="col-7">
+            <div class="nav">
+                {{#each links}}
+                <div class="nav-item">
+                    <a href="{{href}}" class="nav-link">{{text}}</a>
+                </div>
+                {{/each}}
+                <div class="nav-item">
+                    <a href="#" class="nav-link disabled">Disabled</a>
+                </div>
+            </div>
+        </div>
+        {{/with}}
+    </div>
+
+    <div class="container text-center">
+        <div class="row">
+            {{#with newsBlock}}
+            <div>
+                <h2 class="col-12 ">{{title}}</h2>
+            </div>
+            {{/with}}
+        </div>
+    </div>
+</main>
