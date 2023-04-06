@@ -1,0 +1,26 @@
+<main>
+    <div class="row">
+        <h1 class="my-4">{{header}}</h1>
+        {{#with contacts_data}}
+        <h2>{{title}}</h2>
+        <div class="row g-3 mb-5">
+            <div class="col-9">
+                {{#each buttons}}
+                {{#if isPrimary}}
+                <button class="btn btn-warning ms-5">
+                    {{text}}</button>
+                {{/if}}
+                {{#if isOutLine}}
+                <button class="btn btn-outline-warning ms-5">
+                    {{text}}</button>
+                {{/if}}
+
+                {{/each}}
+            </div>
+        </div>
+        {{/with}}
+
+
+    </div>
+
+</main>
