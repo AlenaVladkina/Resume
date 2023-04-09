@@ -1,19 +1,22 @@
-<div class="row">
-    {{#with navigation}}
-    <div class="col-6">
-        <h1>Shop</h1>
-    </div>
-    <div class="col-6">
-        <div class="nav">
-            {{#each links}}
-            <div class="nav-item">
-                <a href="{{href}}" class="nav-link">{{text}}</a>
-            </div>
-            {{/each}}
-            <div class="nav-item">
-                <a href="#" class="nav-link disabled">Disabled</a>
-            </div>
+<div class="card">
+    <div class="row g-5">
+        {{#with navigation}}
+        <div class="col">
+            <h1>Shop</h1>
         </div>
+        <div class="col text-end">
+            <div class="nav">
+                {{#each links}}
+                <div class="nav-item">
+                    <a href="{{href}}" class="nav-link">{{text}}</a>
+                </div>
+                {{/each}}
+                <div class="nav-item">
+                    <a href="#" class="nav-link disabled">Disabled</a>
+                </div>
+            </div>
+
+        </div>
+        {{/with}}
     </div>
-    {{/with}}
 </div>
