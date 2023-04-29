@@ -1,0 +1,39 @@
+<div class="row">
+    {{#with navigation}}
+
+    <div class="col-12 card">
+        <div class="nav">
+
+            {{#each links}}
+            <div class="nav-item">
+                <a href="{{href}}" class="nav-link">{{text}}</a>
+            </div>
+            {{/each}}
+            <div class="nav-item">
+                <a href="#" class="nav-link disabled">Disabled</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        {{#with actionBlock}}
+
+        <ul class="nav nav-tabs">
+            {{#each tabs}}
+            <li class="nav-item">
+                {{#if isActive}}
+                <a href="#" class="nav-link active">{{text}}</a>
+                {{else}}
+                {{#if isDisabled}}
+                <a href="#" class="nav-link disabled">{{text}}</a>
+                {{else}}
+                <a href="#" class="nav-link">{{text}}</a>
+                {{/if}}
+                {{/if}}
+            </li>
+            {{/each}}
+        </ul>
+
+        {{/with}}
+    </div>
+    {{/with}}
+</div>
