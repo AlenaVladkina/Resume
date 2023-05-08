@@ -223,66 +223,187 @@ module.exports = router
 // ================================================================
 
 //              ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/work', function (req, res) {
+router.get('/skills', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
-  res.render('work', {
+  res.render('skills', {
     // ↙ сюди вводимо JSON дані
-
-    layout: 'big',
-
     page: {
-      title: 'Resume | Work',
+      title: 'Resume | Skills',
     },
     header,
+
     main: {
-      works: [
+      skills: [
         {
-          position: 'Junior Fullstack Developer',
-          company: {
-            name: 'IT Brains',
-            url: null,
-          },
-          duration: {
-            from: '10.10.2022',
-            to: null,
-          },
-          projectAmount: 3,
-
-          projects: [
-            {
-              name: 'Resume',
-              url: 'https://resume.com.ua/',
-              about:
-                'VillageWaters is a three-year development project',
-              stacks: [
-                {
-                  name: 'React JS',
-                },
-                {
-                  name: 'HTML',
-                },
-                {
-                  name: 'Node JS',
-                },
-              ],
-              awards: [
-                {
-                  name: 'The LIFE Awards recognise the most innovative, inspirational and effective LIFE projects in three categories: nature protection, environment and climate action.',
-                },
-                {
-                  name: 'PMI Awards honor individuals and organizations whose passion and expertise make the greatest contributions to the project management profession.',
-                },
-              ],
-              stackAmount: 1,
-
-              awardAmount: 2,
-            },
-          ],
+          name: 'HTML',
+          point: '10',
+          isTop: true,
+        },
+        {
+          name: 'Handlebars',
+          point: '10',
+          isTop: true,
+        },
+        {
+          name: 'VS Code & Git',
+          point: '8',
+          isTop: true,
+        },
+        {
+          name: 'Terminal',
+          point: '9',
+        },
+        {
+          name: 'React.js',
+          point: '0',
+        },
+        {
+          name: 'PHP',
+          point: 'null',
+        },
+      ],
+      skills: [
+        {
+          name: 'HTML',
+          point: '10',
+          isTop: true,
+        },
+        {
+          name: 'Handlebars',
+          point: '10',
+          isTop: true,
+        },
+        {
+          name: 'VS Code & Git',
+          point: '8',
+          isTop: true,
+        },
+        {
+          name: 'Terminal',
+          point: '9',
+        },
+        {
+          name: 'React.js',
+          point: '0',
+        },
+        {
+          name: 'PHP',
+          point: 'null',
+        },
+      ],
+      hobbies: [
+        {
+          name: 'Догляд за конем',
+          isMain: true,
+        },
+        {
+          name: 'Східні єдиноборства',
+          isMain: true,
+        },
+        {
+          name: 'Вишивка',
+          isMain: false,
         },
       ],
     },
 
     footer,
+  })
+})
+
+// ================================================================
+
+//              ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/index8', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('index8', {
+    // ↙ сюди вводимо JSON дані
+    page: {
+      title: 'Resume project',
+    },
+
+    layout: 'index',
+
+    name: {
+      firstName: 'Alona',
+      lastName: 'Rudyk',
+    },
+
+    title: 'Resume project',
+
+    main: {
+      title: 'Список сторінок',
+
+      discription: `Наша практика в проєкті "resume" майже завершилась, 
+      нам залишилось лише під’єднати всі сторінки на index сторінці`,
+    },
+
+    buttons: [
+      {
+        text: 'summary',
+        href: 'http://localhost:3000/summary',
+      },
+      {
+        text: 'education',
+        href: 'http://localhost:3000/education',
+      },
+      {
+        text: 'skills',
+        href: 'http://localhost:3000/skills',
+      },
+      {
+        text: 'work',
+        href: 'http://localhost:3000/work',
+      },
+      {
+        text: 'car',
+        href: 'http://localhost:3000/car',
+      },
+      {
+        text: 'js',
+        href: 'http://localhost:3000/js',
+      },
+      {
+        text: 'person',
+        href: 'http://localhost:3000/person',
+      },
+      {
+        text: 'program',
+        href: 'http://localhost:3000/program',
+      },
+      {
+        text: 'shopcart',
+        href: 'http://localhost:3000/shopcart',
+      },
+      {
+        text: 'shophome',
+        href: 'http://localhost:3000/shophome',
+      },
+      {
+        text: 'shopnews',
+        href: 'http://localhost:3000/shopnews',
+      },
+      {
+        text: 'shoporder',
+        href: 'http://localhost:3000/shoporder',
+      },
+      {
+        text: 'shopproduct',
+        href: 'http://localhost:3000/shopproduct',
+      },
+      {
+        text: 'shopreview',
+        href: 'http://localhost:3000/shopreview',
+      },
+      {
+        text: 'task21',
+        href: 'http://localhost:3000/task21',
+      },
+      {
+        text: 'task31',
+        href: 'http://localhost:3000/task31',
+      },
+    ],
   })
 })
 
