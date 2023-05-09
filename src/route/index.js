@@ -311,195 +311,101 @@ router.get('/skills', function (req, res) {
   })
 })
 
-// Підключаємо роутер до бек-енду
-module.exports = router
-
-//=============================================
-
-router.get('/js', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('js', {
-    layout: 'default',
-
-    name: 'JavaScript',
-    description:
-      'JavaScript is a popular high-level, dynamic, and interpreted programming language.',
-    history: {
-      year: 1995,
-      founder: 'Brendan Eich',
-    },
-    types: [
-      'Number',
-      'String',
-      'Boolean',
-      'Null',
-      'Undefined',
-      'Symbol',
-      'Object',
-    ],
-    syntax: {
-      variables: ['var', 'let', 'const'],
-      functions: ['function'],
-      conditionals: ['if', 'else', 'switch'],
-      loops: ['for', 'while', 'do-while'],
-      classes: ['class'],
-    },
-    features: [
-      'First-class functions',
-      'Closures',
-      'Dynamic typing',
-      'Prototype-based inheritance',
-      'Asynchronous programming with Promises and async/await',
-      'Modules with import/export statements',
-    ],
-    libraries: [
-      'jQuery',
-      'React',
-      'Angular',
-      'Vue',
-      'Node.js',
-      'Express.js',
-      'Lodash',
-      'Moment.js',
-    ],
-    tools: [
-      'Babel',
-      'Webpack',
-      'ESLint',
-      'Jest',
-      'Mocha',
-      'Chai',
-      'Selenium',
-      'Cypress',
-    ],
-    community: [
-      {
-        name: 'Stack Overflow',
-        type: 'forum',
-      },
-      {
-        name: 'JavaScript Weekly',
-        type: 'newsletter',
-      },
-      {
-        name: 'The Changelog',
-        type: 'podcast',
-      },
-      {
-        name: 'CSS-Tricks',
-        type: 'blog',
-      },
-    ],
-  })
-  //                  ↑↑ сюди вводимо JSON дані
-})
-
-//==================================================================================
-
-// router.get Створює нам один ентпоїнт
-
-router.get('/car', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('car', {
-    layout: 'default',
-
-    make: 'Toyota',
-    model: 'Camry',
-    year: 2022,
-    color: 'silver',
-    features: {
-      interior: {
-        seats: {
-          material: 'leather',
-          color: 'black',
-          heated: true,
-          ventilated: true,
-        },
-        dashboard: {
-          material: 'plastic',
-          color: 'black',
-          display: {
-            type: 'LCD',
-            size: 10.1,
-            resolution: '1280x720',
-            touchscreen: true,
-          },
-        },
-        audio: {
-          system: 'JBL',
-          speakers: 8,
-          subwoofer: true,
-          bluetooth: true,
-          USB: true,
-        },
-      },
-      exterior: {
-        wheels: {
-          size: 18,
-          type: 'alloy',
-          color: 'silver',
-        },
-        headlights: {
-          type: 'LED',
-          brightness: 'high',
-          automatic: true,
-        },
-        sunroof: {
-          type: 'panoramic',
-          size: 'large',
-          automatic: true,
-        },
-      },
-      safety: {
-        airbags: {
-          front: 2,
-          side: 2,
-          knee: 2,
-          rear: 2,
-        },
-        assistance: {
-          blind_spot_monitoring: true,
-          rear_cross_traffic_alert: true,
-          lane_departure_warning: true,
-          adaptive_cruise_control: true,
-          collision_warning: true,
-        },
-      },
-    },
-    engine: {
-      type: 'gasoline',
-      displacement: 2.5,
-      horsepower: 206,
-      torque: 186,
-      transmission: {
-        type: 'automatic',
-        gears: 8,
-      },
-    },
-    fuel_economy: {
-      city: 28,
-      highway: 39,
-      combined: 32,
-    },
-    price: {
-      base: 25900,
-      destination: 995,
-      options: {
-        navigation: 1200,
-        moonroof: 800,
-        premium_paint: 595,
-      },
-      total: 28990,
-    },
-  })
-  //                  ↑↑ сюди вводимо JSON дані
-})
-
 // ================================================================
 
+//              ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/index8', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('index8', {
+    // ↙ сюди вводимо JSON дані
+    page: {
+      title: 'Resume project',
+    },
+
+    layout: 'index',
+
+    name: {
+      firstName: 'Alona',
+      lastName: 'Rudyk',
+    },
+
+    title: 'Resume project',
+
+    main: {
+      title: 'Список сторінок',
+
+      discription: `Наша практика в проєкті "resume" майже завершилась, 
+      нам залишилось лише під’єднати всі сторінки на index сторінці`,
+    },
+
+    buttons: [
+      {
+        text: 'summary',
+        href: 'http://localhost:3000/summary',
+      },
+      {
+        text: 'education',
+        href: 'http://localhost:3000/education',
+      },
+      {
+        text: 'skills',
+        href: 'http://localhost:3000/skills',
+      },
+      {
+        text: 'work',
+        href: 'http://localhost:3000/work',
+      },
+      {
+        text: 'car',
+        href: 'http://localhost:3000/car',
+      },
+      {
+        text: 'js',
+        href: 'http://localhost:3000/js',
+      },
+      {
+        text: 'person',
+        href: 'http://localhost:3000/person',
+      },
+      {
+        text: 'program',
+        href: 'http://localhost:3000/program',
+      },
+      {
+        text: 'shopcart',
+        href: 'http://localhost:3000/shopcart',
+      },
+      {
+        text: 'shophome',
+        href: 'http://localhost:3000/shophome',
+      },
+      {
+        text: 'shopnews',
+        href: 'http://localhost:3000/shopnews',
+      },
+      {
+        text: 'shoporder',
+        href: 'http://localhost:3000/shoporder',
+      },
+      {
+        text: 'shopproduct',
+        href: 'http://localhost:3000/shopproduct',
+      },
+      {
+        text: 'shopreview',
+        href: 'http://localhost:3000/shopreview',
+      },
+      {
+        text: 'task21',
+        href: 'http://localhost:3000/task21',
+      },
+      {
+        text: 'task31',
+        href: 'http://localhost:3000/task31',
+      },
+    ],
+  })
+})
+
 // Підключаємо роутер до бек-енду
-//module.exports = router
+module.exports = router
