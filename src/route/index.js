@@ -311,472 +311,195 @@ router.get('/skills', function (req, res) {
   })
 })
 
-// ================================================================
+// Підключаємо роутер до бек-енду
+module.exports = router
 
-//              ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/index8', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
-  res.render('index8', {
-    // ↙ сюди вводимо JSON дані
-    page: {
-      title: 'Resume project',
-    },
+//=============================================
 
-    layout: 'index',
-
-    name: {
-      firstName: 'Alona',
-      lastName: 'Rudyk',
-    },
-
-    title: 'Resume project',
-
-    main: {
-      title: 'Список сторінок',
-
-      discription: `Наша практика в проєкті "resume" майже завершилась, 
-      нам залишилось лише під’єднати всі сторінки на index сторінці`,
-    },
-
-    buttons: [
-      {
-        text: 'summary',
-        href: 'http://localhost:3000/summary',
-      },
-      {
-        text: 'education',
-        href: 'http://localhost:3000/education',
-      },
-      {
-        text: 'skills',
-        href: 'http://localhost:3000/skills',
-      },
-      {
-        text: 'work',
-        href: 'http://localhost:3000/work',
-      },
-      {
-        text: 'car',
-        href: 'http://localhost:3000/car',
-      },
-      {
-        text: 'js',
-        href: 'http://localhost:3000/js',
-      },
-      {
-        text: 'person',
-        href: 'http://localhost:3000/person',
-      },
-      {
-        text: 'program',
-        href: 'http://localhost:3000/program',
-      },
-      {
-        text: 'shopcart',
-        href: 'http://localhost:3000/shopcart',
-      },
-      {
-        text: 'shophome',
-        href: 'http://localhost:3000/shophome',
-      },
-      {
-        text: 'shopnews',
-        href: 'http://localhost:3000/shopnews',
-      },
-      {
-        text: 'shoporder',
-        href: 'http://localhost:3000/shoporder',
-      },
-      {
-        text: 'shopproduct',
-        href: 'http://localhost:3000/shopproduct',
-      },
-      {
-        text: 'shopreview',
-        href: 'http://localhost:3000/shopreview',
-      },
-      {
-        text: 'task21',
-        href: 'http://localhost:3000/task21',
-      },
-      {
-        text: 'task31',
-        href: 'http://localhost:3000/task31',
-      },
-    ],
-  })
-})
-
-//==================================================================
-
-router.get('/shoporder', function (req, res) {
+router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('shoporder', {
-    layout: 'shop',
-    navigation: {
-      links: [
-        {
-          text: 'Home',
-          href: 'https://github.com/',
-        },
-        {
-          text: 'Contacts',
-          href: 'https://www.google.com/',
-        },
-        {
-          text: 'Help',
-          href: 'https://www.youtube.com/',
-        },
-        {
-          text: 'Exit',
-          href: null,
-        },
-      ],
-      Logo: 'Logo',
-    },
+  res.render('js', {
+    layout: 'default',
 
-    header: 'Оформлення замовлення',
-    contacts_data: {
-      title: 'Контактні дані',
-
-      buttons: [
-        {
-          text: 'Я новий покупець',
-          isPrimary: true,
-        },
-        {
-          text: 'Я постійний покупець',
-          isOutline: true,
-        },
-      ],
-      form: {
-        input: {
-          surname: {
-            label: 'Прізвище',
-            placeholder: 'Іванов',
-            caption: 'Введіть прізвище',
-          },
-          name: {
-            label: 'Ім’я',
-            placeholder: 'Іван',
-            caption: 'Введіть Ім’я',
-          },
-          phone: {
-            label: 'Мобільний телефон',
-            placeholder: '+38 (XXX) XXX XX XX',
-            caption: 'Введіть телефон',
-          },
-          email: {
-            label: 'Пошта',
-            placeholder: 'ivanivanov@ukr.net',
-            caption: 'Введіть Пошту',
-          },
-        },
-        switch: [
-          {
-            text: 'Отримувати інформацію про новинки',
-            isActive: false,
-          },
-          {
-            text: 'Отримувати інформацію про знижки',
-            isActive: true,
-          },
-        ],
-      },
+    name: 'JavaScript',
+    description:
+      'JavaScript is a popular high-level, dynamic, and interpreted programming language.',
+    history: {
+      year: 1995,
+      founder: 'Brendan Eich',
     },
-    action_block: [
-      { text: 'Швидке замовлення', isPrimary: true },
-      { text: 'Видалити', isDanger: true },
-      { text: 'Детальніше', isInfo: true },
+    types: [
+      'Number',
+      'String',
+      'Boolean',
+      'Null',
+      'Undefined',
+      'Symbol',
+      'Object',
     ],
-    total: {
-      title: 'Всього',
-      item_list: [
-        { name: 'Ноут', price: '25 000 ₴' },
-        { name: 'Мишка', price: '25 000 ₴' },
-        { name: 'Клава', price: '25 000 ₴' },
-      ],
-      additional_info: [
-        { text: 'Всього товарів', value: '75 000 ₴' },
-        { text: 'Купони', value: 'Немає' },
-        { text: 'Доставка', value: 'Безкоштовно' },
-      ],
-      total_price: {
-        text: 'Всього товарів',
-        value: '75 000 ₴',
-      },
-      button: [
-        {
-          text: 'Підтвердити замовлення',
-          isPrimary: true,
-        },
-        {
-          text: 'Відмінити купони',
-          isOutline: true,
-        },
-      ],
+    syntax: {
+      variables: ['var', 'let', 'const'],
+      functions: ['function'],
+      conditionals: ['if', 'else', 'switch'],
+      loops: ['for', 'while', 'do-while'],
+      classes: ['class'],
     },
-    delivery: {
-      title: 'Доставка',
-      select: [
-        {
-          label: 'Місто доставки',
-          placeholder: 'Оберіть місто доставки',
-          options: [
-            { value: '1', text: 'Київ' },
-            { value: '2', text: 'Харків' },
-            { value: '3', text: 'Одеса' },
-            { value: '4', text: 'Львів' },
-            { value: '5', text: 'Дніпро' },
-            { value: '6', text: 'Донецьк' },
-          ],
-        },
-        {
-          label: 'Район доставки',
-          placeholder: 'Оберіть район доставки',
-          options: [
-            { value: '1', text: 'Голосіївський' },
-            { value: '2', text: 'Оболонський' },
-            { value: '3', text: 'Печерський' },
-            { value: '4', text: 'Дарницький' },
-            { value: '5', text: 'Деснянський' },
-            { value: '6', text: 'Подільський' },
-          ],
-        },
-      ],
-      delivery_type: [
-        {
-          type: 'Самовивіз з відділення Нової пошти',
-          value: 'За тарифами перевізника',
-        },
-        {
-          type: 'Кур’єром Нової пошти',
-          value: 'За тарифами перевізника',
-        },
-        {
-          type: 'Самовивіз з магазину',
-          value: 'Безкоштовно',
-        },
-        {
-          type: 'Доставка закордон',
-          value: 'За тарифами перевізника',
-        },
-      ],
-      payment: {
-        title: 'Оплата',
-        list: [
-          {
-            type: 'Оплата при отриманні',
-            description: 'За тарифами перевізника',
-          },
-          {
-            type: 'Оплатити зараз',
-          },
-        ],
+    features: [
+      'First-class functions',
+      'Closures',
+      'Dynamic typing',
+      'Prototype-based inheritance',
+      'Asynchronous programming with Promises and async/await',
+      'Modules with import/export statements',
+    ],
+    libraries: [
+      'jQuery',
+      'React',
+      'Angular',
+      'Vue',
+      'Node.js',
+      'Express.js',
+      'Lodash',
+      'Moment.js',
+    ],
+    tools: [
+      'Babel',
+      'Webpack',
+      'ESLint',
+      'Jest',
+      'Mocha',
+      'Chai',
+      'Selenium',
+      'Cypress',
+    ],
+    community: [
+      {
+        name: 'Stack Overflow',
+        type: 'forum',
       },
-      contact: {
-        title: 'Контактні дані отримувача',
-        surname: {
-          label: 'Прізвище',
-          placeholder: 'Іванов',
-          caption: 'Введіть прізвище',
-        },
-        name: {
-          label: 'Ім’я',
-          placeholder: 'Іван',
-          caption: 'Введіть Ім’я',
-        },
-        phone: {
-          label: 'Мобільний телефон',
-          placeholder: '+38 (XXX) XXX XX XX',
-          caption: 'Введіть телефон',
-        },
-        email: {
-          label: 'Пошта',
-          placeholder: 'ivanivanov@ukr.net',
-          caption: 'Введіть Пошту',
-        },
+      {
+        name: 'JavaScript Weekly',
+        type: 'newsletter',
       },
-      coment: {
-        label: 'Коментар',
-        placeholder: 'Я хочу, щоб',
+      {
+        name: 'The Changelog',
+        type: 'podcast',
       },
-    },
-    coupon: {
-      title: 'Купони',
-      select: {
-        availabel_coupon: {
-          label: 'Наявні купони',
-          placeholder: 'Виберіть купон',
-          options: [
-            { value: '1', text: 'SEEYALATER' },
-            { value: '2', text: 'HOTEL10' },
-            { value: '3', text: 'DOWNLOAD25' },
-          ],
-        },
-        friend_coupon: {
-          label: 'Купони за запрошених друзів',
-          placeholder: 'Виберіть купон',
-          options: [
-            { value: '1', text: 'TRAVEL5' },
-            { value: '2', text: '75VACA' },
-            { value: '3', text: '150VACA' },
-          ],
-        },
+      {
+        name: 'CSS-Tricks',
+        type: 'blog',
       },
-      add: {
-        friend: {
-          label: 'Запросіть друзів та отримайте ще купонів',
-          placeholder:
-            'Введіть контактні дані друзів через ;',
-          caption:
-            'Напишіть електронні адреси/телефон друзів через “;”',
-        },
-        colleague: {
-          label: 'Запросити колег',
-          placeholder:
-            'Введіть контактні дані колег через ;',
-          caption:
-            'Напишіть електронні адреси/телефон колег через “;”',
-        },
-      },
-    },
-    quiz: {
-      title: 'Домоможи краще нам тебе зрозуміти',
-      preference: {
-        title:
-          'Який тип обладнання ви зацікавлені в придбанні?',
-        options: [
-          'Смартфони',
-          'Ноутбуки',
-          'Планшети',
-          'ПК',
-          'Телевізори',
-        ],
-      },
-      your_expirience: {
-        label: 'Який у Вас досвід користування ПК',
-      },
-      purchase_frequency: {
-        label: 'Як часто ви купуєте обладнання?',
-        placeholder: 'Оберіть варіант',
-        options: [
-          { value: '1', text: 'Раз в тиждень' },
-          { value: '2', text: 'Раз в місяць' },
-          { value: '3', text: 'Раз в рік' },
-        ],
-      },
-      factors: {
-        title:
-          'Які з наведених нижче факторів є для вас важливими при купівлі обладнання?',
-        options: [
-          'Ціна',
-          'Репутація бренду',
-          'Якість',
-          'Особливості',
-          'Гарантія',
-          'Доступність',
-          'Обслуговування клієнтів',
-        ],
-      },
-    },
-    footer: [
-      [
-        {
-          text: 'Home',
-          link: 'https://www.youtube.com/',
-        },
-        {
-          text: 'Trending',
-          link: 'https://www.youtube.com/feed/trending',
-        },
-        {
-          text: 'Subscriptions',
-          link: 'https://www.youtube.com/feed/subscriptions',
-        },
-        {
-          text: 'Library',
-          link: 'https://www.youtube.com/feed/library',
-        },
-      ],
-      [
-        {
-          text: 'History',
-          link: 'https://www.youtube.com/feed/history',
-        },
-        {
-          text: 'Your Videos',
-          link: 'https://www.youtube.com/feed/my_videos',
-        },
-        {
-          text: 'Live',
-          link: 'https://www.youtube.com/live',
-        },
-        {
-          text: 'Settings',
-          link: 'https://www.youtube.com/account',
-        },
-      ],
-      [
-        {
-          text: 'Watch Later',
-          link: 'https://www.youtube.com/playlist?list=WL',
-        },
-        {
-          text: 'Liked Videos',
-          link: 'https://www.youtube.com/playlist?list=LL',
-        },
-        {
-          text: 'Music',
-          link: 'https://www.youtube.com/music',
-        },
-        {
-          text: 'Gaming',
-          link: 'https://www.youtube.com/gaming',
-        },
-      ],
-      [
-        {
-          text: 'Sports',
-          link: 'https://www.youtube.com/channel/UCo_q6aOlvPH7M-j_XGWVgXg',
-        },
-        {
-          text: 'News',
-          link: 'https://www.youtube.com/news',
-        },
-        {
-          text: 'Fashion & Beauty',
-          link: 'https://www.youtube.com/channel/UC1x8rV_f-2yPpzlN0JWZXIQ',
-        },
-        {
-          text: 'Learning',
-          link: 'https://www.youtube.com/learning',
-        },
-      ],
-      [
-        {
-          text: 'Report History',
-          link: 'https://www.youtube.com/feed/history/report_history',
-        },
-        {
-          text: 'Help',
-          link: 'https://support.google.com/youtube/?hl=en',
-        },
-        {
-          text: 'Send Feedback',
-          link: 'https://support.google.com/youtube/answer/4347644?hl=en',
-        },
-        {
-          text: 'About',
-          link: 'https://www.youtube.com/about/',
-        },
-      ],
     ],
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
+//==================================================================================
+
+// router.get Створює нам один ентпоїнт
+
+router.get('/car', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('car', {
+    layout: 'default',
+
+    make: 'Toyota',
+    model: 'Camry',
+    year: 2022,
+    color: 'silver',
+    features: {
+      interior: {
+        seats: {
+          material: 'leather',
+          color: 'black',
+          heated: true,
+          ventilated: true,
+        },
+        dashboard: {
+          material: 'plastic',
+          color: 'black',
+          display: {
+            type: 'LCD',
+            size: 10.1,
+            resolution: '1280x720',
+            touchscreen: true,
+          },
+        },
+        audio: {
+          system: 'JBL',
+          speakers: 8,
+          subwoofer: true,
+          bluetooth: true,
+          USB: true,
+        },
+      },
+      exterior: {
+        wheels: {
+          size: 18,
+          type: 'alloy',
+          color: 'silver',
+        },
+        headlights: {
+          type: 'LED',
+          brightness: 'high',
+          automatic: true,
+        },
+        sunroof: {
+          type: 'panoramic',
+          size: 'large',
+          automatic: true,
+        },
+      },
+      safety: {
+        airbags: {
+          front: 2,
+          side: 2,
+          knee: 2,
+          rear: 2,
+        },
+        assistance: {
+          blind_spot_monitoring: true,
+          rear_cross_traffic_alert: true,
+          lane_departure_warning: true,
+          adaptive_cruise_control: true,
+          collision_warning: true,
+        },
+      },
+    },
+    engine: {
+      type: 'gasoline',
+      displacement: 2.5,
+      horsepower: 206,
+      torque: 186,
+      transmission: {
+        type: 'automatic',
+        gears: 8,
+      },
+    },
+    fuel_economy: {
+      city: 28,
+      highway: 39,
+      combined: 32,
+    },
+    price: {
+      base: 25900,
+      destination: 995,
+      options: {
+        navigation: 1200,
+        moonroof: 800,
+        premium_paint: 595,
+      },
+      total: 28990,
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
 // Підключаємо роутер до бек-енду
-module.exports = router
+//module.exports = router
