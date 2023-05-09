@@ -360,10 +360,6 @@ router.get('/index8', function (req, res) {
         href: 'http://localhost:3000/car',
       },
       {
-        text: 'js',
-        href: 'http://localhost:3000/js',
-      },
-      {
         text: 'person',
         href: 'http://localhost:3000/person',
       },
@@ -406,6 +402,173 @@ router.get('/index8', function (req, res) {
     ],
   })
 })
+
+// Підключаємо роутер до бек-енду
+module.exports = router
+
+router.get('/work', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('work', {
+    // ↙ сюди вводимо JSON дані
+
+    layout: 'big',
+
+    page: {
+      title: 'Resume | Work',
+    },
+    header,
+    main: {
+      works: [
+        {
+          position: 'Junior Fullstack Developer',
+          company: {
+            name: 'IT Brains',
+            url: null,
+          },
+          duration: {
+            from: '10.10.2022',
+            to: null,
+          },
+          projectAmount: 3,
+
+          projects: [
+            {
+              name: 'Resume',
+              url: 'https://resume.com.ua/',
+              about:
+                'VillageWaters is a three-year development project',
+              stacks: [
+                {
+                  name: 'React JS',
+                },
+                {
+                  name: 'HTML',
+                },
+                {
+                  name: 'Node JS',
+                },
+              ],
+              awards: [
+                {
+                  name: 'The LIFE Awards recognise the most innovative, inspirational and effective LIFE projects in three categories: nature protection, environment and climate action.',
+                },
+                {
+                  name: 'PMI Awards honor individuals and organizations whose passion and expertise make the greatest contributions to the project management profession.',
+                },
+              ],
+              stackAmount: 1,
+
+              awardAmount: 2,
+            },
+          ],
+        },
+      ],
+    },
+
+    footer,
+  })
+})
+
+router.get('/car', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('car', {
+    layout: 'default',
+
+    make: 'Toyota',
+    model: 'Camry',
+    year: 2022,
+    color: 'silver',
+    features: {
+      interior: {
+        seats: {
+          material: 'leather',
+          color: 'black',
+          heated: true,
+          ventilated: true,
+        },
+        dashboard: {
+          material: 'plastic',
+          color: 'black',
+          display: {
+            type: 'LCD',
+            size: 10.1,
+            resolution: '1280x720',
+            touchscreen: true,
+          },
+        },
+        audio: {
+          system: 'JBL',
+          speakers: 8,
+          subwoofer: true,
+          bluetooth: true,
+          USB: true,
+        },
+      },
+      exterior: {
+        wheels: {
+          size: 18,
+          type: 'alloy',
+          color: 'silver',
+        },
+        headlights: {
+          type: 'LED',
+          brightness: 'high',
+          automatic: true,
+        },
+        sunroof: {
+          type: 'panoramic',
+          size: 'large',
+          automatic: true,
+        },
+      },
+      safety: {
+        airbags: {
+          front: 2,
+          side: 2,
+          knee: 2,
+          rear: 2,
+        },
+        assistance: {
+          blind_spot_monitoring: true,
+          rear_cross_traffic_alert: true,
+          lane_departure_warning: true,
+          adaptive_cruise_control: true,
+          collision_warning: true,
+        },
+      },
+    },
+    engine: {
+      type: 'gasoline',
+      displacement: 2.5,
+      horsepower: 206,
+      torque: 186,
+      transmission: {
+        type: 'automatic',
+        gears: 8,
+      },
+    },
+    fuel_economy: {
+      city: 28,
+      highway: 39,
+      combined: 32,
+    },
+    price: {
+      base: 25900,
+      destination: 995,
+      options: {
+        navigation: 1200,
+        moonroof: 800,
+        premium_paint: 595,
+      },
+      total: 28990,
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
 
 // Підключаємо роутер до бек-енду
 module.exports = router
