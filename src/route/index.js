@@ -469,7 +469,6 @@ router.get('/work', function (req, res) {
   })
 })
 
-<<<<<<< HEAD
 router.get('/car', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -571,7 +570,6 @@ router.get('/car', function (req, res) {
 
 // ================================================================
 
-=======
 // ================================================================
 
 // Підключаємо роутер до бек-енду
@@ -580,8 +578,7 @@ module.exports = router
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
-    
-    layout: "person",
+    layout: 'person',
     person: {
       name: 'Emma Johnson',
       age: 32,
@@ -677,6 +674,6 @@ router.get('/person', function (req, res) {
 })
 
 // ================================================================
->>>>>>> person
+
 // Підключаємо роутер до бек-енду
 module.exports = router
