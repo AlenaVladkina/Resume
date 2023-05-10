@@ -222,94 +222,7 @@ module.exports = router
 
 // ================================================================
 
-//              ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/skills', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
-  res.render('skills', {
-    // ↙ сюди вводимо JSON дані
-    page: {
-      title: 'Resume | Skills',
-    },
-    header,
-
-    main: {
-      skills: [
-        {
-          name: 'HTML',
-          point: '10',
-          isTop: true,
-        },
-        {
-          name: 'Handlebars',
-          point: '10',
-          isTop: true,
-        },
-        {
-          name: 'VS Code & Git',
-          point: '8',
-          isTop: true,
-        },
-        {
-          name: 'Terminal',
-          point: '9',
-        },
-        {
-          name: 'React.js',
-          point: '0',
-        },
-        {
-          name: 'PHP',
-          point: 'null',
-        },
-      ],
-      skills: [
-        {
-          name: 'HTML',
-          point: '10',
-          isTop: true,
-        },
-        {
-          name: 'Handlebars',
-          point: '10',
-          isTop: true,
-        },
-        {
-          name: 'VS Code & Git',
-          point: '8',
-          isTop: true,
-        },
-        {
-          name: 'Terminal',
-          point: '9',
-        },
-        {
-          name: 'React.js',
-          point: '0',
-        },
-        {
-          name: 'PHP',
-          point: 'null',
-        },
-      ],
-      hobbies: [
-        {
-          name: 'Догляд за конем',
-          isMain: true,
-        },
-        {
-          name: 'Східні єдиноборства',
-          isMain: true,
-        },
-        {
-          name: 'Вишивка',
-          isMain: false,
-        },
-      ],
-    },
-
-    footer,
-  })
-})
+//
 
 // ================================================================
 
@@ -375,9 +288,10 @@ router.get('/index8', function (req, res) {
         text: 'shopproduct',
         href: 'http://localhost:3000/shopproduct',
       },
+
       {
-        text: 'shopreview',
-        href: 'http://localhost:3000/shopreview',
+        text: 'shopcart',
+        href: 'http://localhost:3000/shopcart',
       },
       {
         text: 'task21',
