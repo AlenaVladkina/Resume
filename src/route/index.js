@@ -360,11 +360,6 @@ router.get('/index8', function (req, res) {
         href: 'http://localhost:3000/car',
       },
       {
-        text: 'person',
-        href: 'http://localhost:3000/person',
-      },
-
-      {
         text: 'shophome',
         href: 'http://localhost:3000/shophome',
       },
