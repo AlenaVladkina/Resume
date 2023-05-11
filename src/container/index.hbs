@@ -1,11 +1,7 @@
-{{!-- 
-Це код container файлу для index сторінки, 
-в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
- --}}
-
-<h1>Hello world</h1>
-
-{{!-- 
-    Цей код містить лише те, що буде виводитись в <body>
-    Адже наш layout/default.hbs має вже структуру HTML
---}}
+<div>
+    {{#each buttons}}
+    <div class="flex-column">
+        <a class="btn btn-primary my-1 ms-2 col-3" href="{{url}}">{{text}}</a>
+    </div>
+    {{/each}}
+</div>

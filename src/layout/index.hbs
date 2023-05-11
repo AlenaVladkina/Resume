@@ -13,7 +13,18 @@
 
 <body>
     <header>
-        {{>shopheader}}
+        <div class="row">
+            <div class="card">
+                <div class="row card-body">
+                    <div class="col-8">
+                        <h6 class="card-title col">{{name.firstName}} {{name.lastName}}</h6>
+                    </div>
+                    <div class="col-4">
+                        <h6 class="card-title col">{{header}}</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <body>
@@ -23,8 +34,5 @@
             integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
             crossorigin="anonymous"></script>
     </body>
-    <footer>
-        {{>shopfooter}}
-    </footer>
 
 </html>

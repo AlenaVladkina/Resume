@@ -287,20 +287,19 @@ router.get('/work', function (req, res) {
 })
 
 //==================================================================
-router.get('/index10', function (req, res) {
+router.get('/index', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
-  res.render('index10', {
+  res.render('index', {
     // ↙ сюди вводимо JSON дані
-
     layout: 'index',
-
     page: {
       title: 'Resume project',
     },
     name: {
-      firstName: Alona,
-      lastName: Rudyk,
+      firstName: 'Alona',
+      lastName: 'Rudyk',
     },
+    header: 'Resume project',
 
     buttons: [
       {
