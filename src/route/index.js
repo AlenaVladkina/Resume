@@ -286,5 +286,186 @@ router.get('/work', function (req, res) {
   })
 })
 
+router.get('/index8', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('index8', {
+    // ↙ сюди вводимо JSON дані
+
+    layout: 'index',
+
+    page: {
+      title: 'Resume project',
+    },
+
+    name: {
+      firstName: 'Alona',
+      lastName: 'Rudyk',
+    },
+    header: 'Resume project',
+
+    buttons: [
+      {
+        name: 'Skills',
+        link: 'http://localhost:3000/skills',
+      },
+      {
+        name: 'Education',
+        link: 'http://localhost:3000/education',
+      },
+      {
+        name: 'Work',
+        link: 'http://localhost:3000/work',
+      },
+      {
+        name: 'Car',
+        link: 'http://localhost:3000/car',
+      },
+      {
+        name: 'Js',
+        link: 'http://localhost:3000/js',
+      },
+      {
+        name: 'Person',
+        link: 'http://localhost:3000/person',
+      },
+      {
+        name: 'Program',
+        link: 'http://localhost:3000/program',
+      },
+      {
+        name: 'Task21',
+        link: 'http://localhost:3000/task21',
+      },
+      {
+        name: 'Task31',
+        link: 'http://localhost:3000/task31',
+      },
+      {
+        name: 'Shopcart',
+        link: 'http://localhost:3000/shopcart',
+      },
+      {
+        name: 'Shophome',
+        link: 'http://localhost:3000/shophome',
+      },
+      {
+        name: 'Shopnews',
+        link: 'http://localhost:3000/shopnews',
+      },
+      {
+        name: 'Shoporder',
+        link: 'http://localhost:3000/shoporder',
+      },
+      {
+        name: 'Shopproduct',
+        link: 'http://localhost:3000/shopproduct',
+      },
+      {
+        name: 'Shopreview',
+        link: 'http://localhost:3000/shopreview',
+      },
+    ],
+  })
+})
+
+router.get('/car', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('car', {
+    layout: 'default',
+
+    make: 'Toyota',
+    model: 'Camry',
+    year: 2022,
+    color: 'silver',
+    features: {
+      interior: {
+        seats: {
+          material: 'leather',
+          color: 'black',
+          heated: true,
+          ventilated: true,
+        },
+        dashboard: {
+          material: 'plastic',
+          color: 'black',
+          display: {
+            type: 'LCD',
+            size: 10.1,
+            resolution: '1280x720',
+            touchscreen: true,
+          },
+        },
+        audio: {
+          system: 'JBL',
+          speakers: 8,
+          subwoofer: true,
+          bluetooth: true,
+          USB: true,
+        },
+      },
+      exterior: {
+        wheels: {
+          size: 18,
+          type: 'alloy',
+          color: 'silver',
+        },
+        headlights: {
+          type: 'LED',
+          brightness: 'high',
+          automatic: true,
+        },
+        sunroof: {
+          type: 'panoramic',
+          size: 'large',
+          automatic: true,
+        },
+      },
+      safety: {
+        airbags: {
+          front: 2,
+          side: 2,
+          knee: 2,
+          rear: 2,
+        },
+        assistance: {
+          blind_spot_monitoring: true,
+          rear_cross_traffic_alert: true,
+          lane_departure_warning: true,
+          adaptive_cruise_control: true,
+          collision_warning: true,
+        },
+      },
+    },
+    engine: {
+      type: 'gasoline',
+      displacement: 2.5,
+      horsepower: 206,
+      torque: 186,
+      transmission: {
+        type: 'automatic',
+        gears: 8,
+      },
+    },
+    fuel_economy: {
+      city: 28,
+      highway: 39,
+      combined: 32,
+    },
+    price: {
+      base: 25900,
+      destination: 995,
+      options: {
+        navigation: 1200,
+        moonroof: 800,
+        premium_paint: 595,
+      },
+      total: 28990,
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
 // Підключаємо роутер до бек-енду
 module.exports = router
