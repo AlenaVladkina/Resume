@@ -6,11 +6,16 @@
     <div class="col-6">
         <div class="nav">
             {{#each links}}
+
             <div>
                 <a class="nav-link
                     {{#if @last}} disabled {{/if}}" href="{{link}}">{{text}}</a>
             </div>
             {{/each}}
+
+
+
+
         </div>
     </div>
     {{/with}}
