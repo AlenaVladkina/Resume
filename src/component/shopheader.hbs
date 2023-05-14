@@ -1,6 +1,5 @@
 <div class="row">
     {{#with navigation}}
-<<<<<<< HEAD
     <div class="col-6">
         <h1>Shop</h1>
     </div>
@@ -8,29 +7,13 @@
         <div class="nav">
             {{#each links}}
             <div class="nav-item">
-                <a href="{{href}}" class="nav-link {{#if @last}}disabled{{/if}}">{{text}}</a>
+                <a class="nav-link {{#if @last}}disabled{{/if}}" href="{{href}}" >{{text}}</a>
             </div>
             {{/each}}
             <div class="nav-item">
             </div>
         </div>
     </div>
-=======
 
-    <div class="col-12 card">
-        <div class="nav">
-
-            {{#each links}}
-            <div class="nav-item">
-                <a href="{{href}}" class="nav-link">{{text}}</a>
-            </div>
-            {{/each}}
-            <div class="nav-item">
-                <a href="#" class="nav-link disabled">Disabled</a>
-            </div>
-        </div>
-    </div>
-
->>>>>>> shopcart
-    {{/with}}
-</div>
+   
+   
