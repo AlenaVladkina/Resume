@@ -1,0 +1,68 @@
+<main>
+    <div>
+        {{#with heading}}
+
+        {{#with main}}
+        <h1>{{title}}</h1>
+        <p class="text-muted">{{text}}</p>
+        <button class="btn btn-primary">{{button_text.solid}}</button>
+        <button class="btn btn-outline text-primary">{{button_text.outline}}</button>
+        {{/with}}
+
+        <hr>
+
+        {{#with second}}
+        <h2>{{title}}</h2>
+        <p class="text-secondary">{{text}}</p>
+        <button class="btn btn-secondary ">{{button_text.solid}}</button>
+        <button class="btn btn-outline text-secondary">{{button_text.outline}}</button>
+        {{/with}}
+
+        <hr>
+
+        {{#with subblock}}
+        <h3>{{title}}</h3>
+        <p class="text-dark">{{text}}</p>
+        <button class="btn btn-dark">{{button_text.solid}}</button>
+        <button class="btn btn-outline text-dark">{{button_text.outline}}</button>
+        {{/with}}
+        {{/with}}
+
+        <hr>
+
+        {{#with nested_display}}
+        <div class="display-1">{{title}}</div>
+        {{#with children_display}}
+        <div class="display-4">{{title}}</div>
+        <p class="text-dark">{{text}}</p>
+        <button class="btn btn-outline text-warning">{{button.text}}</button>
+        {{/with}}
+
+        <hr>
+
+        <h6>{{header_text}}</h6>
+        <button class="btn btn-info">{{button.text}}</button>
+        {{/with}}
+
+        <hr>
+
+        {{#with paragraph}}
+        <p class="text-uppercase">{{title}}</p>
+        <p class="text-lowercase">{{paragraph.text}}</p>
+
+        <hr>
+
+        <button class="btn btn-link">{{button.text}}</button>
+
+        <hr>
+
+        {{#each list_name}}
+        <ul>
+            <li><a class="btn btn-link" href="{{url}}">{{text}}</a></li>
+        </ul>
+        {{/each}}
+        {{/with}}
+
+        <hr>
+    </div>
+</main>
