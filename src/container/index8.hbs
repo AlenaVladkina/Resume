@@ -1,0 +1,11 @@
+<main>
+    <div class="row g-2">
+        <h2>{{main.title}}</h2>
+        <p class="mb-4">{{main.discription}}</p>
+    </div>
+    <div class="col-3 ">
+        {{#each buttons}}
+        <a href="{{href}}" class=" btn text-bg-primary nav-link my-3">{{text}}</a>
+        {{/each}}
+    </div>
+</main>

@@ -154,7 +154,7 @@
                     <div>
                         {{#with availabel_coupon}}
                         <label class="form-label col-12 my-2">{{label}}
-                            <select class="form-select custom-select-lg">
+                            <select class="form-select form-select-lg">
                                 <option selected>{{placeholder}}</option>
                                 {{#each options}}
                                 <option value="{{value}}">{{text}}</option>
@@ -165,7 +165,7 @@
                     <div>
                         {{#with friend_coupon}}
                         <label class="form-label col-12">{{label}}
-                            <select class="form-select custom-select-sm mb-3">
+                            <select class="form-select form-select-sm mb-3">
                                 <option selected>{{placeholder}}</option>
                                 {{#each options}}
                                 <option value="{{value}}">{{text}}</option>
@@ -178,14 +178,14 @@
                     <div>
                         {{#with add}}
                         {{#with friend}}
-                        <label class="form-label col-12 custom-select-lg">{{label}}
-                            <input class="form-control" placeholder="{{placeholder}}">
+                        <label class="form-label col-12">{{label}}
+                            <input class="form-control form-control-lg" placeholder="{{placeholder}}">
                         </label>
                         <div class="form-text">{{caption}}</div>
                         {{/with}}
                         {{#with colleague}}
                         <label class="form-label col-12 custom-select-lg">{{label}}
-                            <input class="form-control" placeholder="{{placeholder}}">
+                            <input class="form-control form-control-sm" placeholder="{{placeholder}}">
                         </label>
                         <div class="form-text">{{caption}}</div>
                         {{/with}}
@@ -293,3 +293,5 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>

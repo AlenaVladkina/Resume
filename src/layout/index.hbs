@@ -12,22 +12,19 @@
 </head>
 
 <body>
-<<<<<<< HEAD
     <header>
-        {{>shopheader}}
+        <div class="row">
+            <div class="card">
+                <div class="row card-body">
+                    <h6 class="col-9">
+                        {{name.firstName}}
+                        {{name.lastName}}
+                    </h6>
+                    <h6 class="col-3">{{title}}</h6>
+                </div>
+            </div>
+        </div>
     </header>
-
-    <body>
-        {{! ↓ ця кострукція показує куди шаблонізатору треба вставляти код з container файлу --}}
-        {{{body}}}
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
-            crossorigin="anonymous"></script>
-    </body>
-    <footer>
-        {{>shopfooter}}
-    </footer>
-=======
 
     {{! ↓ ця кострукція показує куди шаблонізатору треба вставляти код з container файлу --}}
     {{{body}}}
@@ -35,6 +32,5 @@
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
         crossorigin="anonymous"></script>
 </body>
->>>>>>> shophome
 
 </html>
