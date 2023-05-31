@@ -1,36 +1,7 @@
 <main>
-<<<<<<< HEAD
-    <hr>
-=======
-    <div class="row">
-        {{#with navigation}}
-        <div class="col-6">
-            <h1>Shop</h1>
-        </div>
-        <div class="col-6">
-            <div class="nav nav-tabs">
-                {{#each links}}
-                <div class="nav-item">
-                    <a href="{{href}}" class="nav-link">{{text}}</a>
-                </div>
-                {{/each}}
-                <div class="nav-item">
-                    <a href="#" class="nav-link disabled">Disabled</a>
-                </div>
-            </div>
-        </div>
-        {{/with}}
-    </div>
-
-    <hr>
-
->>>>>>> abf77e85231c8faf38e1cd981625223e5e252e7b
     <div>
         {{#with newsBlock}}
-        <div>
-            <h2 class="container text-center mt-5">{{title}}</h2>
-        </div>
-
+        <h2 class="container text-center mt-5">{{title}}</h2>
         <div class="row g-3">
             {{#each cards}}
             <div class="col-3">
@@ -47,21 +18,13 @@
             </div>
             {{/each}}
         </div>
-<<<<<<< HEAD
-
         {{/with}}
-=======
-    </div>
-    {{/with}}
->>>>>>> abf77e85231c8faf38e1cd981625223e5e252e7b
     </div>
 
     <hr>
 
-
     <div>
         {{#with goodsBlock}}
-
         <ul class="nav nav-tabs">
             {{#each tabs}}
             <li class="nav-item">
@@ -93,17 +56,10 @@
             </div>
             {{/each}}
         </div>
-<<<<<<< HEAD
-
         {{/with}}
-=======
-    </div>
-    {{/with}}
->>>>>>> abf77e85231c8faf38e1cd981625223e5e252e7b
     </div>
 
     <hr>
-
     <div class="row text-bg-dark">
         {{#with subscribe}}
         <div class="col-7">
@@ -111,24 +67,15 @@
         </div>
         <div class=" col-5 mt-4">
             <div class="nav-item">
-
                 {{#each buttons}}
                 <button class="btn btn-link text-bg-info">{{text}}</button>
                 {{/each}}
             </div>
         </div>
         <p>{{description}}</p>
-<<<<<<< HEAD
-
         {{/with}}
-=======
     </div>
-    {{/with}}
->>>>>>> abf77e85231c8faf38e1cd981625223e5e252e7b
-    </div>
-
     <hr>
-
     <div class="text-center text-bg-success">
         {{#with service}}
         <h2>{{title}}</h2>
@@ -138,26 +85,5 @@
         {{/each}}
         {{/with}}
     </div>
-
     <hr>
-
 </main>
-
-<footer>
-    <div class="row g-5">
-        {{#each footer}}
-        <div class="nav col-2">
-            <div>
-                {{#each this}}
-                <div>
-                    <a href="{{this.link}}" class="nav-link
-                    {{#if @last}}disabled{{/if}}">{{this.text}}</a>
-                </div>
-                {{/each}}
-            </div>
-        </div>
-
-        {{/each}}
-    </div>
-
-</footer>

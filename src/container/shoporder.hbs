@@ -15,7 +15,6 @@
                 {{/if}}
                 {{/each}}
             </div>
-
             <div class="container">
                 <div class="row">
                     {{#with form}}
@@ -56,8 +55,6 @@
             </div>
             <hr>
             {{/with}}
-
-
             {{#with delivery}}
             <h4>{{title}}</h4>
             <div class="card">
@@ -74,23 +71,17 @@
                     {{/each}}
                 </div>
             </div>
-
             <div>
                 {{#each delivery_type}}
                 <div class="form-check my-1">
-
                     <label class="form-check-label">{{type}}
-
                         <input type="radio" class="form-check-input">
                     </label>
                     <p class="text-end p-0">{{value}}</p>
                 </div>
                 {{/each}}
-
-
             </div>
             <hr my-5>
-
             <div>
                 {{#with payment}}
                 <h5>{{title}}</h5>
@@ -104,7 +95,6 @@
                 {{/with}}
             </div>
             <hr>
-
             <div>
                 {{#with contact}}
                 <h5>{{title}}</h5>
@@ -134,19 +124,14 @@
                     </div>
                 </div>
                 {{/with}}
-
                 <hr>
-
                 <div>
                     {{#with coment}}
                     {{>form}}
                     {{/with}}
                 </div>
                 {{/with}}
-
-
                 <hr>
-
                 <div>
                     {{#with coupon}}
                     <h4>{{title}}</h4>
@@ -194,9 +179,7 @@
                         {{/with}}
                     </div>
                 </div>
-
                 <hr>
-
                 <div>
                     {{#with quiz}}
                     {{#with preference}}
@@ -246,7 +229,6 @@
                 </div>
             </div>
         </div>
-
         <div class="col-4">
             <div class="row">
                 <div class="card mb-2">
@@ -266,7 +248,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col">
                     <div class="card">
                         {{#with total}}
@@ -296,3 +277,4 @@
             </div>
         </div>
     </div>
+</main>
