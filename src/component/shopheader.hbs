@@ -6,23 +6,11 @@
     <div class="col-6">
         <div class="nav">
             {{#each links}}
-<<<<<<< HEAD
-
-            <div>
-                <a class="nav-link
-                    {{#if @last}} disabled {{/if}}" href="{{link}}">{{text}}</a>
-=======
             <div class="nav-item">
-                <a class="nav-link {{#if @last}}disabled{{/if}}" href="{{href}}" >{{text}}</a>
->>>>>>> abf77e85231c8faf38e1cd981625223e5e252e7b
+                <a class="nav-link {{#if @last}}disabled{{/if}}" href="{{href}}">{{text}}</a>
             </div>
             {{/each}}
-
-
-
-
         </div>
     </div>
-
-   
-   
+    {{/with}}
+</div>

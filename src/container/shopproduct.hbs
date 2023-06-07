@@ -80,14 +80,12 @@
                             </ul>
                         </div>
                     </div>
-                    {{#with alert}}
-                    <div class="alert p-1">
-                        {{#if isError}}<span class="alert alert-danger">{{text}}</span>{{/if}}
+                    <div class="col" {{#with alert}}>
+                        {{#if isError}}<span class="alert alert-danger">
+                            {{text}}</span>{{/if}}
+                        {{/with}}
                     </div>
-                    {{/with}}
-
                 </div>
-
                 <div class="row g-3 mb-5">
                     <div class="col-9">
                         {{#each actionList}}
