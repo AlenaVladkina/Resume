@@ -76,9 +76,6 @@ router.get('/summary', function (req, res) {
 
 // ================================================================
 
-// ================================================================
-
-//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/skills', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('skills', {
@@ -250,52 +247,52 @@ router.get('/index8', function (req, res) {
     buttons: [
       {
         text: 'summary',
-        href: 'http://localhost:3000/summary',
+        href: '/summary',
       },
       {
         text: 'education',
-        href: 'http://localhost:3000/education',
+        href: '/education',
       },
       {
         text: 'skills',
-        href: 'http://localhost:3000/skills',
+        href: '/skills',
       },
       {
         text: 'work',
-        href: 'http://localhost:3000/work',
+        href: '/work',
       },
       {
         text: 'car',
-        href: 'http://localhost:3000/car',
+        href: '/car',
       },
       {
         text: 'shophome',
-        href: 'http://localhost:3000/shophome',
+        href: '/shophome',
       },
       {
         text: 'shopnews',
-        href: 'http://localhost:3000/shopnews',
+        href: '/shopnews',
       },
       {
         text: 'shoporder',
-        href: 'http://localhost:3000/shoporder',
+        href: '/shoporder',
       },
       {
         text: 'shopproduct',
-        href: 'http://localhost:3000/shopproduct',
+        href: '/shopproduct',
       },
 
       {
         text: 'shopcart',
-        href: 'http://localhost:3000/shopcart',
+        href: '/shopcart',
       },
       {
         text: 'task21',
-        href: 'http://localhost:3000/task21',
+        href: '/task21',
       },
       {
         text: 'task31',
-        href: 'http://localhost:3000/task31',
+        href: '/task31',
       },
     ],
   })
@@ -364,80 +361,6 @@ router.get('/work', function (req, res) {
     },
 
     footer,
-  })
-})
-
-router.get('/index8', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
-  res.render('index8', {
-    // ↙ сюди вводимо JSON дані
-
-    layout: 'index',
-
-    page: {
-      title: 'Resume project',
-    },
-
-    name: {
-      firstName: 'Alona',
-      lastName: 'Rudyk',
-    },
-    header: 'Resume project',
-
-    buttons: [
-      {
-        name: 'Skills',
-        link: 'http://localhost:3000/skills',
-      },
-      {
-        name: 'Education',
-        link: 'http://localhost:3000/education',
-      },
-      {
-        name: 'Work',
-        link: 'http://localhost:3000/work',
-      },
-      {
-        name: 'Car',
-        link: 'http://localhost:3000/car',
-      },
-      {
-        name: 'Program',
-        link: 'http://localhost:3000/program',
-      },
-      {
-        name: 'Task21',
-        link: 'http://localhost:3000/task21',
-      },
-      {
-        name: 'Task31',
-        link: 'http://localhost:3000/task31',
-      },
-      {
-        name: 'Shopcart',
-        link: 'http://localhost:3000/shopcart',
-      },
-      {
-        name: 'Shophome',
-        link: 'http://localhost:3000/shophome',
-      },
-      {
-        name: 'Shopnews',
-        link: 'http://localhost:3000/shopnews',
-      },
-      {
-        name: 'Shoporder',
-        link: 'http://localhost:3000/shoporder',
-      },
-      {
-        name: 'Shopproduct',
-        link: 'http://localhost:3000/shopproduct',
-      },
-      {
-        name: 'Shopreview',
-        link: 'http://localhost:3000/shopreview',
-      },
-    ],
   })
 })
 
